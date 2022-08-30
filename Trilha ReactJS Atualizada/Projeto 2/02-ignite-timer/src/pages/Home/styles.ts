@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HomeContainer = styled.main`
   flex: 1;
@@ -24,10 +24,10 @@ export const FormContainer = styled.div`
   justify-content: center;
   gap: 0.5rem;
 
-  color: ${props => props.theme['gray-100']};
+  color: ${(props) => props.theme['gray-100']};
   font-size: 1.125rem;
   font-weight: bold;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 `
 
 const BaseInput = styled.input`
@@ -36,17 +36,16 @@ const BaseInput = styled.input`
   padding: 0 0.5rem;
 
   border: 0;
-  border-bottom: 2px solid ${props => props.theme['gray-500']};
+  border-bottom: 2px solid ${(props) => props.theme['gray-500']};
 
   font-weight: bold;
   font-size: 1.125rem;
-  color: ${props => props.theme['gray-100']};
+  color: ${(props) => props.theme['gray-100']};
 
   &::placeholder {
     box-shadow: none;
-    border-color: ${props => props.theme['green-500']};
+    border-color: ${(props) => props.theme['green-500']};
   }
-
 `
 
 export const TextInput = styled(BaseInput)`
@@ -62,16 +61,16 @@ export const MinutesAmountInput = styled(BaseInput)`
 `
 
 export const CountDownContainer = styled.div`
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 10rem;
   line-height: 8rem;
-  color: ${props => props.theme['gray-100']};
+  color: ${(props) => props.theme['gray-100']};
 
   display: flex;
   gap: 1rem;
 
   span {
-    background: ${props => props.theme['gray-700']};
+    background: ${(props) => props.theme['gray-700']};
     padding: 2rem 1rem;
     border-radius: 8px;
   }
@@ -79,15 +78,15 @@ export const CountDownContainer = styled.div`
 
 export const Separator = styled.div`
   padding: 3rem 0;
-  color: ${props => props.theme['green-500']};
+  color: ${(props) => props.theme['green-500']};
 
   width: 4rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
-`;
+`
 
-export const StartCountDownButton = styled.button`
+export const BaseCountDownButton = styled.button`
   width: 100%;
   padding: 1rem;
   border: none;
@@ -99,18 +98,27 @@ export const StartCountDownButton = styled.button`
 
   gap: 0.5rem;
   font-weight: bold;
+  color: ${(props) => props.theme['gray-100']};
 
   cursor: pointer;
-
-  background: ${props => props.theme['green-500']};
-  color: ${props => props.theme['gray-100']};
-
-  &:not(:disabled):hover {
-    background: ${props => props.theme['green-700']};
-  }
 
   &:disabled {
     opacity: 0.7;
     cursor: not-allowed;
   }
-`;
+`
+export const StartCountDownButton = styled(BaseCountDownButton)`
+  background: ${(props) => props.theme['green-500']};
+
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme['green-700']};
+  }
+`
+
+export const StopCountDownButton = styled(BaseCountDownButton)`
+  background: ${(props) => props.theme['red-500']};
+
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme['red-700']};
+  }
+`
