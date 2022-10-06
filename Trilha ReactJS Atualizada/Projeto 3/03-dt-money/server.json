@@ -23,6 +23,22 @@
       "category": "educação",
       "price": 1980,
       "createdAt": "2022-09-23T09:05:32.799Z"
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 10000,
+      "category": "venda",
+      "type": "income",
+      "createdAt": "2022-10-03T11:30:31.507Z",
+      "id": "PI34eku"
+    },
+    {
+      "description": "Bolo de morango",
+      "price": 8,
+      "category": "alimentação",
+      "type": "outcome",
+      "createdAt": "2022-10-03T11:43:18.500Z",
+      "id": "3uK7z8t"
     }
   ]
 }
